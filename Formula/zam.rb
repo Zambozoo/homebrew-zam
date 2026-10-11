@@ -2,7 +2,7 @@ class Zam < Formula
   desc "The Zam programming language"
   homepage "https://github.com/Zambozoo/zam"
   url "https://github.com/Zambozoo/zam/archive/refs/tags/v0.1.2.tar.gz"
-  sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
+  sha256 "da47a3c63ea325d790e5e421c011555dec95164e05e7f7c7fe151ab19e98c0bb"
 
   license "MIT" # Replace with your actual license
 
