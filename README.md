@@ -20,7 +20,7 @@ brew install zam
 Once installed, verify the installation by checking the version:
 
 ```bash
-zam --version
+zam -h
 ```
 ## Maintenance & Updates
 To update zam to the latest release:
