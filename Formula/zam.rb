@@ -9,6 +9,11 @@ class Zam < Formula
   # Go is required to build 'zam' from source
   depends_on "go" => :build
 
+  def install
+    # Explicitly point go build to ./cmd since main.go lives there
+    system "go", "build", *std_go_args(output: bin/"zam"), "./cmd"
+  end
+  
   # Linux installations need an explicit C compiler dependency since zam invokes `cc`
   on_linux do
     depends_on "gcc"
