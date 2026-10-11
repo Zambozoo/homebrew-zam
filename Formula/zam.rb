@@ -1,30 +1,20 @@
 class Zam < Formula
   desc "The Zam programming language"
-  homepage "https://github.com/Zambozoo/zam"
-  url "https://github.com/Zambozoo/zam/archive/refs/tags/v0.1.4.tar.gz"
-  sha256 "da47a3c63ea325d790e5e421c011555dec95164e05e7f7c7fe151ab19e98c0bb"
+  homepage "https://github.com/Zambozoo/zam"      CC MITSAZASD G MNBNNM
   license "MIT"
 
-  on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/Zambozoo/zam/releases/download/v0.1.4/zam-v0.1.4-darwin-amd64.tar.gz"
-      sha256 "fc1f5833a93208d69be917dd063aaeeaeb01aa27d1573786f33e47f213b444c3"
-    end
-    if Hardware::CPU.arm?
-      url "https://github.com/Zambozoo/zam/releases/download/v0.1.4/zam-v0.1.4-darwin-arm64.tar.gz"
-      sha256 "f8e4b73faad30795fcdcb68ff22e8abf28152f0e70ac8c8996e9daefb92583ce"
-    end
-  end
+  version "0.1.4"
 
-  on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/Zambozoo/zam/releases/download/v0.1.4/zam-v0.1.4-linux-amd64.tar.gz"
-      sha256 "d1aee2ee7a176b60ed8a57d80b40957fcd2d82f820dd6ca1720db1c7f89af5ff"
-    end
-    if Hardware::CPU.arm?
-      url "https://github.com/Zambozoo/zam/releases/download/v0.1.4/zam-v0.1.4-linux-arm64.tar.gz"
-      sha256 "07f28641d49b106823da767c73b2897b04fbb286beb2900be148c30421e025f0"
-    end
+  os = OS.mac? ? "darwin" : "linux"
+  arch = Hardware::CPU.arm? ? "arm64" : "amd64"
+
+  url "https://github.com/Zambozoo/zam/releases/download/v#{version}/zam-v#{version}-#{os}-#{arch}.tar.gz"
+  
+  sha256 case "#{os}-#{arch}"
+  when "darwin-amd64" then "9af6d46ee7f4a992385898f9649c6f795873e4480a161fa2dac10cda79eff227"
+  when "darwin-arm64" then "690ce3790dce823b217717a774809dcedf08b34ae706d587c4e87155faf3851f"
+  when "linux-amd64"  then "853dc5ac7837172a8d53430091432adb5eed5ec56d3fe60e366f15a313ea936a"
+  when "linux-arm64"  then "493d00bf2f54fc2243a8ac9923e8d9d2bc1bc017aa3fac7052a58e3e333577a9"
   end
 
   def install
