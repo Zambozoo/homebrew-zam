@@ -7,7 +7,7 @@ Official [Homebrew](https://brew.sh) tap for the [Zam](https://github.com/Zamboz
 You can install `zam` directly using Homebrew on macOS or Linux (including WSL):
 
 ```bash
-brew tap Zambozoo/zam
+brew install Zambozoo/zam/zam
 ```
 Or, tap the repository first and install:
 
