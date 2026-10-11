@@ -1,6 +1,6 @@
 class Zam < Formula
   desc "The Zam programming language"
-  homepage "https://github.com/Zambozoo/zam"      CC MITSAZASD G MNBNNM
+  homepage "https://github.com/Zambozoo/zam"
   license "MIT"
 
   version "0.1.4"
