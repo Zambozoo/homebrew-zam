@@ -1,5 +1,5 @@
 # Homebrew Tap for Zam
-
+![Zam Logo](assets/logo_banner.png)
 Official [Homebrew](https://brew.sh) tap for the [Zam](https://github.com/Zambozoo/zam) programming language.
 
 ## Installation
