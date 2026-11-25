@@ -3,7 +3,7 @@ class Zam < Formula
   homepage "https://github.com/Zambozoo/zam"
   license "MIT"
 
-  version "0.1.11"
+  version "0.1.12"
 
   os = OS.mac? ? "darwin" : "linux"
   arch = Hardware::CPU.arm? ? "arm64" : "amd64"
@@ -11,10 +11,10 @@ class Zam < Formula
   url "https://github.com/Zambozoo/zam/releases/download/v#{version}/zam-v#{version}-#{os}-#{arch}.tar.gz"
 
   sha256 case "#{os}-#{arch}"
-  when "darwin-amd64" then "3a9352955be18fbdeaef9e8cdd9d19dc5d66601c29ab7b294da07b3761f3574f"
-  when "darwin-arm64" then "4d540bf72800928e44bd04954e710d3f2543ad357e1557f42831719836e77462"
-  when "linux-amd64"  then "4b8f1d3ced55534386d217602a69dce87799f1cf7d106d95cdfc461a73493479"
-  when "linux-arm64"  then "a81ddab9ff0ac8392709c1acfbde1b1dc412ea264c4ba95206df6918de28df46"
+  when "darwin-amd64" then "0d80bc636d5a15d17b0259e9d5924f7ff6e9b6778a1ee6ae795b52207b36d5fd"
+  when "darwin-arm64" then "903655a41e0bdbd8364d3bde3003786cf78a4578eef61ca5ed84c9f65afb72e1"
+  when "linux-amd64"  then "1e0cda8d1f8baa0cb7305193acee134b4df0680f823fa956f5acee15df3a8f1b"
+  when "linux-arm64"  then "7d9c9077b2c2445ff7e5d260ce5432bccde56ecefd23449bf0769f68f7a2b400"
   end
 
   def install
